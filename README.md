@@ -1,1 +1,1 @@
-"# serialized-dropwizard-archetype" 
+# Serialized Dropwizard Archetype 
