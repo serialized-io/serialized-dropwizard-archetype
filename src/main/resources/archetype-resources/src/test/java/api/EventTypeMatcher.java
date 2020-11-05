@@ -22,11 +22,11 @@ public class EventTypeMatcher implements ArgumentMatcher<EventBatch> {
   @Override
   public boolean matches(EventBatch argument) {
     for (Event<?> event : argument.events()) {
-      if (!eventTypes.contains(event.eventType())) {
-        return false;
+      if (eventTypes.contains(event.eventType())) {
+        return true;
       }
     }
-    return true;
+    return false;
   }
 
 }
