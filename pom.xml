@@ -5,7 +5,7 @@
 
   <groupId>io.serialized.archetype</groupId>
   <artifactId>serialized-dropwizard-archetype</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.0.2</version>
   <packaging>maven-archetype</packaging>
 
   <name>serialized-dropwizard-archetype</name>
@@ -29,7 +29,7 @@
     <url>https://github.com/serialized-io/serialized-dropwizard-archetype</url>
     <connection>scm:git:git://github.com/serialized-io/serialized-dropwizard-archetype.git</connection>
     <developerConnection>scm:git:git@github.com:serialized-io/serialized-dropwizard-archetype.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>serialized-dropwizard-archetype-1.0.2</tag>
   </scm>
 
   <distributionManagement>
