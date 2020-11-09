@@ -1,4 +1,5 @@
 #set( $aggregateRootLc = $aggregateRoot.toLowerCase() )
+#set( $aggregateRootLcPlural = $aggregateRootLc + "s" )
 # Event Sourcing / CQRS Demo App using Dropwizard and Serialized
 
 ---
@@ -54,7 +55,7 @@ The expected response should be something like this:
 
 ```
 HTTP/1.1 201 Created
-Location: http://localhost:8080/queries/${aggregateRootLc}/3dbc7063-76d6-4df2-8ab4-72d1f897563b
+Location: http://localhost:8080/queries/${aggregateRootLcPlural}/3dbc7063-76d6-4df2-8ab4-72d1f897563b
 Content-Length: 0
 ```
 Note that the _Location_ header points to where we can access the projected read-model via the query API.
@@ -69,7 +70,7 @@ When we want to get our data, we use the query API.
 Try to get the projected ${aggregateRootLc} state using this simple GET request:
 
 ```
-curl -i http://localhost:8080/queries/${aggregateRootLc}/3dbc7063-76d6-4df2-8ab4-72d1f897563b
+curl -i http://localhost:8080/queries/${aggregateRootLcPlural}/3dbc7063-76d6-4df2-8ab4-72d1f897563b
 ```
 
 The expected response should be something like this:
@@ -104,7 +105,7 @@ curl -i http://localhost:8080/commands/finish-${aggregateRootLc} \
 Do the same GET request as before:
 
 ```
-curl -i http://localhost:8080/queries/${aggregateRootLc}/3dbc7063-76d6-4df2-8ab4-72d1f897563b
+curl -i http://localhost:8080/queries/${aggregateRootLcPlural}/3dbc7063-76d6-4df2-8ab4-72d1f897563b
 ```
 
 The _status_ field should now say **FINISHED**.
